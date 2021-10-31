@@ -11,7 +11,7 @@ let score = 0;
 document.addEventListener("keydown", moveUp)
 
 function moveUp() {
-    //fly.play()
+    fly.play()
     bY -= 25
 }
 
@@ -48,7 +48,7 @@ function draw() {
 
 
     for (let i = 0; i < pipe.length; i++) {
-        const gap = 85;
+        const gap = 150;
         let constant = pipeNorth.height + gap;
         ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
         ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y + constant);
@@ -71,7 +71,7 @@ function draw() {
         //score
         if (pipe[i].x === 5) {
             score++;
-            fly.play()
+            score1.play()
         }
     }
 
